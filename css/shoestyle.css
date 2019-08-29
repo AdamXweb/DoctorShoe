@@ -689,3 +689,142 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
+/* Leather shoe custom */
+
+.frame {
+	position: absolute;
+	top: 0px;
+	left: 147px;
+	width: 151px;
+	height: 245px;
+	transform-origin: 50% 0;
+}
+.green{
+  --colour:90deg;
+  --sat:100%;
+}
+.blue{
+  --colour:-80deg;
+  --sat: 90%;
+}
+.pink{
+  --colour:-43deg;
+  --sat: 100%;
+}
+.black{
+  --colour:0deg;
+  --sat:0%;
+}
+.purple{
+  --colour: -23deg;
+  --sat:50%;
+}
+.shoe {
+	position: relative;
+	width: 151px;
+	height: 128px;
+	background: url('../img/leather.svg') center center no-repeat;
+	transform-origin: 0 95%;
+  filter: hue-rotate(var(--colour)) saturate(var(--sat));
+}
+
+/* Everyday SHoe*/
+
+
+.evshoe {
+  width:250px;
+  height:200px;
+  background:transparent;
+  position:relative;
+  border-radius:5px;
+  display:inline-block;
+  margin:20px;
+  transition:1s;
+}
+
+
+.base {
+  width:200px;
+  height:75px;
+  background:white;
+  position:absolute;
+  left:25px;
+  top:50px;
+  border-radius:5px;
+  box-shadow:inset 0 0 10px rgba(125,125,125,.65);
+  clip-path:polygon(0% 84%, 2% 80%, 5% 80%, 60% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.base:after {
+  content:'';
+  width:60px;
+  height:60px;
+  background:#333;
+  box-shadow:0 0 0px 5px rgba(0,0,0,.25);
+  position:absolute;
+  left:65%;
+  top:-35px;
+  border-radius:50%;
+}
+.decor {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.0);
+  left:20%;
+  top:-60%;
+  border-radius:25px 0px 0px 0px;
+  transform:rotate(-25deg) scaleY(-1);
+  border:1px dotted rgba(125,125,125,1);
+}
+.decor:before {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:transparent;
+  left:4px;
+  top:4px;
+  border-radius:20px 0px 0px 0px;
+  border:1px dotted rgba(125,125,125,1);
+}
+.decor:after {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:transparent;
+  left:9px;
+  top:9px;
+  border-radius:15px 0px 0px 0px;
+  border:1px dotted rgba(125,125,125,1);
+}
+
+.laces {
+  position:absolute;
+  left:60px;
+  top:62px;
+  transform:rotate(-28deg);
+}
+.lace {
+  width:5px;
+  height:8px;
+  border-radius:5px;
+  background:black;
+  box-shadow:0 0 2px rgba(125,125,125,1);
+  display:inline-block;
+  margin-right:10px;
+}
+
+.sole {
+  width:200px;
+  height:12px;
+  background:white;
+  border-radius:4px 4px 10px 10px;
+  position:absolute;
+  left:25px;
+  top:125px;  
+  box-shadow:inset 0 3px 5px rgba(125,125,125,.35);
+}
+
+
