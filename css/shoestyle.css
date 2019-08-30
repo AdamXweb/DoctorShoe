@@ -702,22 +702,27 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .green{
   --colour:90deg;
   --sat:100%;
+  --backg:rgba(21, 247, 21, var(--opac));
 }
 .blue{
   --colour:-80deg;
   --sat: 90%;
+  --backg:rgba(22, 41, 212, var(--opac));
 }
 .pink{
   --colour:-43deg;
   --sat: 100%;
+  --backg:rgba(255, 2, 234,var(--opac));
 }
 .black{
   --colour:0deg;
   --sat:0%;
+  --backg:rgba(49, 49, 49, var(--opac));
 }
 .purple{
   --colour: -23deg;
   --sat:50%;
+  --backg:rgba(131, 0, 218, var(--opac));
 }
 .shoe {
 	position: relative;
@@ -746,7 +751,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .base {
   width:200px;
   height:75px;
-  background:white;
+  background: white;
+  background:var(--backg);
+  --opac:0.7;
   position:absolute;
   left:25px;
   top:50px;
@@ -771,13 +778,15 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   width:100%;
   height:100%;
   background:rgba(0,0,0,.0);
+  background:var(--backg);
+  --opac: 0.85;
   left:20%;
   top:-60%;
   border-radius:25px 0px 0px 0px;
   transform:rotate(-25deg) scaleY(-1);
   border:1px dotted rgba(125,125,125,1);
 }
-.decor:before {
+/* .decor:before {
   content:'';
   position:absolute;
   width:100%;
@@ -798,7 +807,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   top:9px;
   border-radius:15px 0px 0px 0px;
   border:1px dotted rgba(125,125,125,1);
-}
+} */
 
 .laces {
   position:absolute;
@@ -810,7 +819,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   width:5px;
   height:8px;
   border-radius:5px;
-  background:black;
+  background: black;
+  background:var(--backg);
+  --opac:1;
   box-shadow:0 0 2px rgba(125,125,125,1);
   display:inline-block;
   margin-right:10px;
@@ -819,7 +830,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .sole {
   width:200px;
   height:12px;
-  background:white;
+  background: white;
+  background:var(--backg);
+  --opac:1;
   border-radius:4px 4px 10px 10px;
   position:absolute;
   left:25px;
@@ -827,4 +840,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   box-shadow:inset 0 3px 5px rgba(125,125,125,.35);
 }
 
-
+.reflect{
+  transform: scaleX(-1);
+}
