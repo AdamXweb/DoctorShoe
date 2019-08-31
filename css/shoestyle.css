@@ -704,6 +704,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   --sat:100%;
   --backg:rgba(21, 247, 21, var(--opac));
 }
+.red{
+  --colour:;
+  --sat:100%;
+  --backg:rgba(255, 0, 10, var(--opac));rgba(255, 0, 0, 0)
+}
 .blue{
   --colour:-80deg;
   --sat: 90%;
@@ -723,6 +728,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   --colour: -23deg;
   --sat:50%;
   --backg:rgba(131, 0, 218, var(--opac));
+}
+.white{
+  --colour: -23deg;
+  --sat:50%;
+  --backg:rgba(255, 255, 255 var(--opac));
 }
 .shoe {
 	position: relative;
