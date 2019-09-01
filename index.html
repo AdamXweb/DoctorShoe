@@ -58,6 +58,10 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button></div>
+      </div>
       </div>
     </div>
   </nav>
@@ -501,15 +505,40 @@
                           </select>
                         </br>
                         <label>Colour of base </label><select id="selectbase" class="selectbase mb-2">
-                          <option value="white">White</option>
-                          <option value="red">Red</option>
-                          <option value="green">Green</option>
-                          <option value="blue">Blue</option>
-                          <option value="black">Black</option>
-                          <option value="purple">Purple</option>
-                          <option value="pink">Pink</option>
+                          <option style="background-color: White;" value="white">White</option>
+                          <option style="background-color: red;" value="red">Red</option>
+                          <option style="background-color: green;color: #FFFFFF;" value="green">Green</option>
+                          <option style="background-color: Blue; color: #FFFFFF;" value="blue">Blue</option>
+                          <option style="background-color: Black;color: #FFFFFF;" value="black">Black</option>
+                          <option style="background-color: Purple;color: #FFFFFF;" value="purple">Purple</option>
+                          <option style="background-color: DeepPink;" value="pink">Pink</option>
                         </select>
-                          <a class="btn btn-primary" data-toggle="modal" href="#checkout"><i class="fas fa-cart-plus"></i>
+                      </br>
+                        <select id="selecttest" class="selecttest mb-2">
+                          <option value="">Pick favourites</option>
+                          <option value="#000000" style="background-color: Black;color: #FFFFFF;">Black</option>
+                          <option value="#808080" style="background-color: Gray;">Gray</option>
+                          <option value="#A9A9A9" style="background-color: DarkGray;">DarkGray</option>
+                          <option value="#D3D3D3" style="background-color: LightGrey;">LightGray</option>
+                          <option value="#FFFFFF" style="background-color: White;">White</option>
+                          <option value="#7FFFD4" style="background-color: Aquamarine;">Aquamarine</option>
+                          <option value="#0000FF" style="background-color: Blue;">Blue</option>
+                          <option value="#000080" style="background-color: Navy;color: #FFFFFF;">Navy</option>
+                          <option value="#800080" style="background-color: Purple;color: #FFFFFF;">Purple</option>
+                          <option value="#FF1493" style="background-color: DeepPink;">DeepPink</option>
+                          <option value="#EE82EE" style="background-color: Violet;">Violet</option>
+                          <option value="#FFC0CB" style="background-color: Pink;">Pink</option>
+                          <option value="#006400" style="background-color: DarkGreen;color: #FFFFFF;">DarkGreen</option>
+                          <option value="#008000" style="background-color: Green;color: #FFFFFF;">Green</option>
+                          <option value="#9ACD32" style="background-color: YellowGreen;">YellowGreen</option>
+                          <option value="#FFFF00" style="background-color: Yellow;">Yellow</option>
+                          <option value="#FFA500" style="background-color: Orange;">Orange</option>
+                          <option value="#FF0000" style="background-color: Red;">Red</option>
+                          <option value="#A52A2A" style="background-color: Brown;">Brown</option>
+                          <option value="#DEB887" style="background-color: BurlyWood;">BurlyWood</option>
+                          <option value="#F5F5DC" style="background-color: Beige;">Beige</option>
+                          </select>
+                          <a class="add-to-cart btn btn-primary" data-name="Everyday shoe" data-price="$100" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
                             Add to cart </a>
                         </div>
                         <div class="col-6">
@@ -529,7 +558,7 @@
                         </div>
                       </div>
                       <div class="col-12">
-    
+                       
                       </div>
                     </div>
                   </div>
@@ -689,6 +718,31 @@
       </div>
     </div>
   </div>
+<!-- Cart test modal-->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+        <button class="clear-cart btn btn-danger">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+</div> 
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -703,6 +757,7 @@
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
   <script src="js/shoe.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 
 </html>

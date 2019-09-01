@@ -28,3 +28,10 @@ $("#selectbase").on("change",function(){
   $(".base").removeClass(`${baseVal}`).addClass(`${baval}`);
   baseVal = baval;
 });
+
+var testVal;
+$("#selecttest").on("change",function(){
+  var tval = $(this).find('option:selected').val();
+  $(".base").removeClass(`${testVal}`).addClass(`${tval}`);
+  testVal = tval;
+});
