@@ -145,6 +145,7 @@ var shoppingCart = (function() {
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
     shoppingCart.addItemToCart(name, price, 1);
+    document.getElementById('#evShoe').style.display = "hidden";
     displayCart();
   });
   
