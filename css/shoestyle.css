@@ -705,7 +705,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   --backg:rgba(21, 247, 21, var(--opac));
 }
 .red{
-  --colour:;
+  --colour:red;
   --sat:100%;
   --backg:rgba(255, 0, 10, var(--opac));
 }
@@ -802,22 +802,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .baseshoe{
   --url: url('../img/texture/leather_0000s_0009_Base.png')
 }
-/* .shoe::before {
-  content: '';
-  background: url('../img/texture/grain.webp');
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity .5s;
-}
-
-.shoe:hover::before {
-  opacity: .5; /* amount of opacity to blend the two images */
-} */
-
 
 /* Everyday SHoe*/
 
