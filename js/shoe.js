@@ -8,7 +8,7 @@ var soleVal;
 $("#selectsole").on("change",function(){
   var soval = $(this).find('option:selected').val();
   $(".sole").removeClass(`${soleVal}`).addClass(`${soval}`);
-  soleVal = val;
+  soleVal = soval;
 });
 var laceVal;
 $("#selectlace").on("change",function(){
@@ -34,4 +34,10 @@ $("#selecttest").on("change",function(){
   var tval = $(this).find('option:selected').val();
   $(".base").removeClass(`${testVal}`).addClass(`${tval}`);
   testVal = tval;
+});
+var textVal = 'baseshoe';
+$("#selecttexture").on("change",function(){
+  var teval = $(this).find('option:selected').val();
+  $(".texture").removeClass(`${textVal}`).addClass(`${teval}`);
+  textVal = teval;
 });

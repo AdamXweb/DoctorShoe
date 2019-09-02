@@ -724,6 +724,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   --sat:0%;
   --backg:rgba(49, 49, 49, var(--opac));
 }
+.brown{
+  --colour:0deg;
+  --sat:0%;
+  --backg:rgba(116, 77, 20, var(--opac));
+}
 .purple{
   --colour: -23deg;
   --sat:50%;
@@ -735,13 +740,84 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   --backg:rgba(255, 255, 255 var(--opac));
 }
 .shoe {
-	position: relative;
-	width: 151px;
-	height: 128px;
+	position: absolute;
+	width: 302px;
+	height: 256px;
 	background: url('../img/leather.svg') center center no-repeat;
-	transform-origin: 0 95%;
+  
+  transform: scale(2);
   filter: hue-rotate(var(--colour)) saturate(var(--sat));
 }
+
+.soles{
+  position: absolute;
+  width: 151px;
+	height: 128px;
+  background: url('../img/texture/leather_0000s_0007_sole.png');
+  background-size: 151px;
+  background-repeat: no-repeat;
+}
+.llaces{
+  position: absolute;
+  width: 151px;
+	height: 128px;
+  background: url('../img/texture/leather_0000s_0006_Laces.png');
+  background-size: 151px;
+  background-repeat: no-repeat;
+}
+.stiching{
+  position: absolute;
+  width: 151px;
+	height: 128px;
+  background: url('../img/texture/leather_0000s_0008_stiching.png');
+  background-size: 151px;
+  background-repeat: no-repeat;
+}
+.texture{
+  position: absolute;
+  width: 151px;
+	height: 128px;
+  background: var(--url);
+  background-size: 151px;
+  background-repeat: no-repeat;
+}
+.holey{
+  --url: url('../img/texture/leather_0000s_0004_holey.png')
+}
+.sofa{
+  --url: url('../img/texture/leather_0000s_0002_sofa.png')
+}
+.shiny{
+  --url: url('../img/texture/leather_0000s_0003_shiny.png')
+}
+.thich{
+  --url: url('../img/texture/leather_0000s_0001_thich.png')
+}
+.ugly{
+  --url: url('../img/texture/leather_0000s_0000_ugly.png')
+}
+.crocodile{
+  --url: url('../img/texture/leather_0000s_0005_crocodile.png')
+}
+.baseshoe{
+  --url: url('../img/texture/leather_0000s_0009_Base.png')
+}
+/* .shoe::before {
+  content: '';
+  background: url('../img/texture/grain.webp');
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.shoe:hover::before {
+  opacity: .5; /* amount of opacity to blend the two images */
+} */
+
 
 /* Everyday SHoe*/
 
