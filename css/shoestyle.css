@@ -744,7 +744,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .white{
   --colour: 0deg;
   --sat:0%;
-  --backg:rgba(255, 255, 255 var(--opac));
+  --backg:rgba(255, 255, 255, var(--opac));
+  --bri:3.3;
+}
+.yellow{
+  --colour: 55deg;
+  --sat:100%;
+  --backg:rgb(251, 255, 0, var(--opac));
   --bri:3.3;
 }
 .shoe {
