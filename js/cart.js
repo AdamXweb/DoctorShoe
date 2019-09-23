@@ -9,11 +9,11 @@ var shoppingCart = (function() {
     cart = [];
     
     // Constructor
-    function Item(name, price, count, desc) {
+    function Item(name, price, count, description) {
       this.name = name;
       this.price = price;
       this.count = count;
-      this.desc = desc;
+      this.description = description;
     }
     
     // Save cart
@@ -164,12 +164,11 @@ var shoppingCart = (function() {
     for(var i in cartArray) {
       output += "<tr>"
         + "<td>" + cartArray[i].name + "</td>" 
-        + "<td>(" + cartArray[i].price + ")</td>"
-        + "<td>(" + cartArray[i].desc + ")</td>"
+        + "<td>(" + cartArray[i].description + ")</td>"
         + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+        // + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
         + " = " 
-        + "<td>" + cartArray[i].total + "</td>" 
+        + "<td>" + "$ " + cartArray[i].total + "</td>" 
         +  "</tr>";
     }
     $('.show-cart').html(output);
