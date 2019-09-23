@@ -1,9 +1,29 @@
+// Leather shoe
 var prevVal;
       $("#color").on("change",function(){
         var lval = $(this).find('option:selected').val();
-        $(".shoe").removeClass(`${prevVal}`).addClass(`${lval}`);
+        $(".texture").removeClass(`${prevVal}`).addClass(`${lval}`);
         prevVal = lval;
       });
+var textVal = 'baseshoe';
+$("#selecttexture").on("change",function(){
+  var teval = $(this).find('option:selected').val();
+  $(".texture").removeClass(`${textVal}`).addClass(`${teval}`);
+  textVal = teval;
+});
+var leastich;
+$("#leastich").on("change",function(){
+  var lestich = $(this).find('option:selected').val();
+  $(".stiching").removeClass(`${leastich}`).addClass(`${lestich}`);
+  leastich = lestich;
+});
+var lealaces;
+$("#lealaces").on("change",function(){
+  var lelaces = $(this).find('option:selected').val();
+  $(".llaces").removeClass(`${lealaces}`).addClass(`${lelaces}`);
+  lealaces = lelaces;
+});
+// Everyday shoe
 var soleVal;
 $("#selectsole").on("change",function(){
   var soval = $(this).find('option:selected').val();
@@ -35,9 +55,4 @@ $("#selecttest").on("change",function(){
   $(".base").removeClass(`${testVal}`).addClass(`${tval}`);
   testVal = tval;
 });
-var textVal = 'baseshoe';
-$("#selecttexture").on("change",function(){
-  var teval = $(this).find('option:selected').val();
-  $(".texture").removeClass(`${textVal}`).addClass(`${teval}`);
-  textVal = teval;
-});
+

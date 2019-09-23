@@ -59,7 +59,7 @@ h6 {
     padding: 150px 0;
   }
 }
-
+/* 
 ::-moz-selection {
   background: #fed136;
   text-shadow: none;
@@ -68,7 +68,7 @@ h6 {
 ::selection {
   background: #fed136;
   text-shadow: none;
-}
+} */
 
 img::-moz-selection {
   background: transparent;
@@ -703,104 +703,126 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   --colour:90deg;
   --sat:100%;
   --backg:rgba(21, 247, 21, var(--opac));
+  --bri:1.2;
 }
 .red{
   --colour:red;
   --sat:100%;
   --backg:rgba(255, 0, 10, var(--opac));
+  --bri:1;
 }
 .blue{
-  --colour:-80deg;
+  --colour:-144deg;
   --sat: 90%;
   --backg:rgba(22, 41, 212, var(--opac));
+  --bri:1;
 }
 .pink{
   --colour:-43deg;
   --sat: 100%;
   --backg:rgba(255, 2, 234,var(--opac));
+  --bri:1.4;
 }
 .black{
   --colour:0deg;
   --sat:0%;
   --backg:rgba(49, 49, 49, var(--opac));
+  --bri:1;
 }
 .brown{
-  --colour:0deg;
-  --sat:0%;
+  --colour:40deg;
+  --sat:50%;
   --backg:rgba(116, 77, 20, var(--opac));
+  --bri:0.9;
 }
 .purple{
-  --colour: -23deg;
+  --colour: -60deg;
   --sat:50%;
   --backg:rgba(131, 0, 218, var(--opac));
+  --bri:1.2;
 }
 .white{
-  --colour: -23deg;
-  --sat:50%;
+  --colour: 0deg;
+  --sat:0%;
   --backg:rgba(255, 255, 255 var(--opac));
+  --bri:3.3;
 }
 .shoe {
-	position: absolute;
-	width: 302px;
-	height: 256px;
-	background: url('../img/leather.svg') center center no-repeat;
-  
-  transform: scale(2);
-  filter: hue-rotate(var(--colour)) saturate(var(--sat));
+	position: relative;
+	--width: 302px;
+	--height: 256px;
+  background-image: url('../img/leather.svg') center center no-repeat;
+  background-position: center; 
+  background-repeat: no-repeat;
+  /* transform: scale(2); */
+  filter: hue-rotate(var(--colour)) saturate(var(--sat)) brightness(var(--bri));
 }
 
 .soles{
   position: absolute;
-  width: 151px;
-	height: 128px;
-  background: url('../img/texture/leather_0000s_0007_sole.png');
-  background-size: 151px;
+  width: var(--width);
+	height: var(--height);
+  background-image: url('../img/texture/leather_0000s_0007_sole.png');
+  background-size: var(--width);
   background-repeat: no-repeat;
+  background-position: center; 
+  --opac:1;
 }
 .llaces{
   position: absolute;
-  width: 151px;
-	height: 128px;
-  background: url('../img/texture/leather_0000s_0006_Laces.png');
-  background-size: 151px;
+  width: var(--width);
+	height: var(--height);
+  background-image: url('../img/texture/leather_0000s_0006_Laces.png');
+  background-size: var(--width);
   background-repeat: no-repeat;
+  background-position: center; 
+  --opac:1;
 }
 .stiching{
-  position: absolute;
-  width: 151px;
-	height: 128px;
-  background: url('../img/texture/leather_0000s_0008_stiching.png');
-  background-size: 151px;
+  width: var(--width);
+	height: var(--height);
+  background-image: url('../img/texture/leather_0000s_0008_stiching.png');
+  background-size: var(--width);
   background-repeat: no-repeat;
+  background-position: center; 
+  --opac:1;
 }
 .texture{
   position: absolute;
-  width: 151px;
-	height: 128px;
-  background: var(--url);
-  background-size: 151px;
+  width: var(--width);
+	height: var(--height);
+  background-image: var(--url);
+  background-size: var(--width);
   background-repeat: no-repeat;
+  background-position: center; 
+  --opac:1;
+}
+.optionselect{
+  vertical-align: middle;
+  align-items: center;
+  text-align:right !important;
+  max-width: 80%;
 }
 .holey{
-  --url: url('../img/texture/leather_0000s_0004_holey.png')
+  --url: url('../img/texture/leather_0004_holey.png')
 }
 .sofa{
-  --url: url('../img/texture/leather_0000s_0002_sofa.png')
+  --url: url('../img/texture/leather_0002_sofa.png')
 }
 .shiny{
-  --url: url('../img/texture/leather_0000s_0003_shiny.png')
+  --url: url('../img/texture/leather_0003_shiny.png')
 }
 .thich{
-  --url: url('../img/texture/leather_0000s_0001_thich.png')
+  --url: url('../img/texture/leather_0001_thich.png')
 }
 .ugly{
-  --url: url('../img/texture/leather_0000s_0000_ugly.png')
+  --url: url('../img/texture/leather_0000_ugly.png')
 }
 .crocodile{
-  --url: url('../img/texture/leather_0000s_0005_crocodile.png')
+  --url: url('../img/texture/leather_0005_crocodile.png')
 }
 .baseshoe{
-  --url: url('../img/texture/leather_0000s_0009_Base.png')
+  --url: url('../img/texture/leather_0009_Base.png')
 }
 
 /* Everyday SHoe*/
