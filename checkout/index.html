@@ -7,19 +7,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/DoctorShoe/css/store.css">
-  <link rel="icon" type="image/png" sizes="104x80" href="/DoctorShoe/img/checkout/logo.png">
+  <link rel="icon" type="image/png" sizes="104x80" href="/DoctorShoe/favicon.png">
 </head>
 
 <body>
   <main id="main" class="loading">
     <header class="header">
-      <a class="shop" href="/">DoctorShoe Checkout</a>
+      <a class="shop" href="/DoctorShoe/">DoctorShoe Checkout</a>
     </header>
     <div id="checkout">
       <div id="payment-request">
         <div id="payment-request-button"></div>
       </div>
-      <form id="payment-form" method="POST" action="/orders">
+      <form id="payment-form" method="POST" action="https://stripe-payments-demo.appspot.com/orders">
         <p class="instruction"><span>Complete</span>/<span id="generate">generate</span> your shipping and payment details below</p>
         <section>
           <h2>Shipping &amp; Billing Information</h2>
