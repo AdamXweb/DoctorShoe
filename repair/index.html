@@ -11,7 +11,7 @@
   <title>Doctor Shoe</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,8 +22,8 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/shoestyle.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <link href="../css/shoestyle.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png" />
 
 </head>
 
@@ -80,7 +80,7 @@
         <div>
           <label class="desc" id="title1" for="Field1">Postage Label:</label>
           <div>
-            <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+            <input id="Field1" name="Field1" type="text" class="field text fn" value="" required size="8" tabindex="1">
           </div>
         </div>
 
@@ -94,9 +94,9 @@
         </div>
 
         <div>
-          <label class="desc" id="title4" for="Field4">
+          <h5 class="desc" id="title4" for="Field4">
             Recolour your shoes
-          </label>
+          </h5>
           </br>
 
           <label>Colour of upper </label>
@@ -149,20 +149,7 @@
         </div>
 
         <div>
-          <fieldset>
-
-            <legend id="title5" class="desc">
-              Provide a image (Browse from computer)
-            </legend>
-
-            <div>
-
-              <div>
-                <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
-              </div>
-
-
-          </fieldset>
+          <input type="file" />
         </div>
 
         <div>
@@ -172,14 +159,13 @@
             </legend>
             <div>
               <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
-
             </div>
           </fieldset>
         </div>
-
+        <center>
+          <button class="btn btn-primary btn-xl mb-5 text-uppercase js-scroll-trigger" href="#">Confirm</button>
+        </center>
         <div>
-
-
           <p>
             <h1>OUR PROCESS</h1>
             <b>Our Return and Repair process is very simply to follow. We provide this service because we really care
@@ -205,44 +191,44 @@
       </form>
     </div>
   </section>
- <!-- Cart test modal-->
- <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table class="show-cart table">
+  <!-- Cart test modal-->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
 
-        </table>
-        <div>Total price: $<span class="total-cart"></span></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="checkout"type="button" class="btn btn-primary">Order now</a>
-        <button class="clear-cart btn btn-danger">Clear Cart</button>
+          </table>
+          <div>Total price: $<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="checkout" type="button" class="btn btn-primary">Order now</a>
+          <button class="clear-cart btn btn-danger">Clear Cart</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+  <script src="../js/jqBootstrapValidation.js"></script>
+  <script src="../js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/cart.js"></script>
+  <script src="../js/cart.js"></script>
   <style>
     * {
       -webkit-box-sizing: border-box;
