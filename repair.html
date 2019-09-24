@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Where the best shoes live">
+  <meta name="author" content="Doctor Shoe">
+
+  <title>Doctor Shoe</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/shoestyle.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/DoctorShoe/">Doctor Shoe
+        <i class="fas fa-shoe-prints fa-stack text-primary"></i>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/DoctorShoe/#advantages">Advantages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/DoctorShoe/#product">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/DoctorShoe/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/DoctorShoe/#repair">Repair & Recolour</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/DoctorShoe/#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span
+                class="total-count"></span>)</button></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-section">
+    <div class="container">
+      <form action="#">
+
+        <header>
+          <h2>Return and Repair product</h2>
+
+        </header>
+
+        <div>
+          <label class="desc" id="title1" for="Field1">Postage Label:</label>
+          <div>
+            <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+          </div>
+        </div>
+
+        <div>
+          <label class="desc" id="title3" for="Field3">
+            Description of what is damaged:
+          </label>
+          <div>
+            <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
+          </div>
+        </div>
+
+        <div>
+          <label class="desc" id="title4" for="Field4">
+            Recolour your shoes
+          </label>
+          </br>
+
+          <label>Colour of upper </label>
+          <select id="selectupper" class="selectupper mb-2">
+            <option style="background-color: White;" value="white">White</option>
+            <option style="background-color: red;" value="red">Red</option>
+            <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
+            <option style="background-color: Blue; color: #FFFFFF;" value="blue">Blue</option>
+            <option style="background-color: Black;color: #FFFFFF;" value="black">Black</option>
+            <option style="background-color: Purple;color: #FFFFFF;" value="purple">Purple</option>
+            <option style="background-color: DeepPink;" value="pink">Pink</option>
+            <option style="background-color: brown;color: #FFFFFF;" value="brown">Brown</option>
+          </select>
+          </br>
+          <label>Colour of laces </label>
+          <select id="selectlace" class="selectlace mb-2">
+            <option style="background-color: White;" value="white">White</option>
+            <option style="background-color: red;" value="red">Red</option>
+            <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
+            <option style="background-color: Blue; color: #FFFFFF;" value="blue">Blue</option>
+            <option style="background-color: Black;color: #FFFFFF;" value="black">Black</option>
+            <option style="background-color: Purple;color: #FFFFFF;" value="purple">Purple</option>
+            <option style="background-color: DeepPink;" value="pink">Pink</option>
+            <option style="background-color: brown;color: #FFFFFF;" value="brown">Brown</option>
+          </select>
+          </br>
+          <label>Colour of sole </label>
+          <select id="selectsole" class="selectsole mb-2">
+            <option style="background-color: White;" value="white">White</option>
+            <option style="background-color: red;" value="red">Red</option>
+            <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
+            <option style="background-color: Blue; color: #FFFFFF;" value="blue">Blue</option>
+            <option style="background-color: Black;color: #FFFFFF;" value="black">Black</option>
+            <option style="background-color: Purple;color: #FFFFFF;" value="purple">Purple</option>
+            <option style="background-color: DeepPink;" value="pink">Pink</option>
+            <option style="background-color: brown;color: #FFFFFF;" value="brown">Brown</option>
+          </select>
+          </br>
+          <label>Colour of base </label>
+          <select id="selectbase" class="selectbase mb-2">
+            <option style="background-color: White;" value="white">White</option>
+            <option style="background-color: red;" value="red">Red</option>
+            <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
+            <option style="background-color: Blue; color: #FFFFFF;" value="blue">Blue</option>
+            <option style="background-color: Black;color: #FFFFFF;" value="black">Black</option>
+            <option style="background-color: Purple;color: #FFFFFF;" value="purple">Purple</option>
+            <option style="background-color: DeepPink;" value="pink">Pink</option>
+            <option style="background-color: brown;color: #FFFFFF;" value="brown">Brown</option>
+          </select>
+        </div>
+
+        <div>
+          <fieldset>
+
+            <legend id="title5" class="desc">
+              Provide a image (Browse from computer)
+            </legend>
+
+            <div>
+
+              <div>
+                <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
+              </div>
+
+
+          </fieldset>
+        </div>
+
+        <div>
+          <fieldset>
+            <legend id="title6" class="desc">
+              Ship back to following address
+            </legend>
+            <div>
+              <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
+
+            </div>
+          </fieldset>
+        </div>
+
+        <div>
+
+
+          <p>
+            <h1>OUR PROCESS</h1>
+            <b>Our Return and Repair process is very simply to follow. We provide this service because we really care
+              about our customer everday footwear.
+              <ol>
+                <li> When the custumer buys the product from us. They will provided with postage label attached to their
+                  shoe box.
+                </li>
+                <li> When the customer shoe is torn or broken. They can fill in the following section of return and
+                  repair. The section provides with
+                  Postage label, Description of what is damaged, recolour the shoes part, provide the image of what is
+                  damaged, and last section gives you an address with
+                  where to delivery the shoe. The most best part about this process is that customer can recustomise
+                  thier shoes again.</li>
+                <li> Once the shoe reaches us, the customer will be notificed through text message and email. A invoice
+                  will be send to their email too. Then we will
+                  send the shoe to the customer again with the postage label which is a ongoing and never ending
+                  process.
+                </li>
+              </ol>
+          </p>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/cart.js"></script>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px 15%;
+    }
+
+    form header {
+      margin: 0 0 20px 0;
+    }
+
+    form header div {
+      font-size: 90%;
+      color: #999;
+    }
+
+    form header h2 {
+      margin: 0 0 5px 0;
+    }
+
+    form>div {
+      clear: both;
+      overflow: hidden;
+      padding: 1px;
+      margin: 0 0 10px 0;
+    }
+
+    form>div>fieldset>div>div {
+      margin: 0 0 5px 0;
+    }
+
+    form>div>label,
+    legend {
+      width: 25%;
+      float: left;
+      padding-right: 10px;
+    }
+
+    form>div>div,
+    form>div>fieldset>div {
+      width: 75%;
+      float: right;
+    }
+
+    form>div>fieldset label {
+      font-size: 90%;
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=url],
+    input[type=password],
+    textarea {
+      width: 100%;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=url],
+    input[type=password] {
+      width: 50%;
+    }
+
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=url]:focus,
+    input[type=password]:focus,
+    textarea:focus {
+      outline: 0;
+      border-color: #4697e4;
+    }
+
+    @media (max-width: 600px) {
+      form>div {
+        margin: 0 0 15px 0;
+      }
+
+      form>div>label,
+      legend {
+        width: 100%;
+        float: none;
+        margin: 0 0 5px 0;
+      }
+
+      form>div>div,
+      form>div>fieldset>div {
+        width: 100%;
+        float: none;
+      }
+
+      input[type=text],
+      input[type=email],
+      input[type=url],
+      input[type=password],
+      textarea,
+      select {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+
+      form>div>label,
+      legend {
+        text-align: right;
+      }
+    }
+  </style>
+</body>

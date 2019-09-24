@@ -56,3 +56,11 @@ $("#selecttest").on("change",function(){
   testVal = tval;
 });
 
+// Pre Customisations WIP
+
+var customVal;
+$("#selectcustom").on("change", function(){
+  var cval = $(this).find('option:selected').each(function() {
+    $("select#color").val($(this).val());
+  });
+});
