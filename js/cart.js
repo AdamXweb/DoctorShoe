@@ -146,7 +146,7 @@ var shoppingCart = (function() {
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
     shoppingCart.addItemToCart(name, price, 1);
-    $('#evShoe, #leathershoe').modal('hide');
+    $('#evShoe, #leathershoe, #Access').modal('hide');
     $('#cart').modal('show');
     displayCart();
   });
