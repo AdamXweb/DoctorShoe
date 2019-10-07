@@ -8,20 +8,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/store.css">
   <link rel="icon" type="image/png" sizes="104x80" href="../favicon.png">
+
+  <!-- Custom fonts for this template -->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+
 </head>
 
 <body>
   <main id="main" class="loading">
-    <header class="header">
-      <a class="shop" href="../">DoctorShoe Checkout</a>
+    <header class="header" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../">Doctor Shoe
+          <i class="fas fa-shoe-prints fa-stack text-primary"></i>
+        </a>
+      </div>
     </header>
+
+    <!-- main section-->
+
     <div id="checkout">
       <div id="payment-request">
         <div id="payment-request-button"></div>
       </div>
+      <aside id="summary">
+        <section></section>
+        <div class="header">
+          <h1>Order Summary</h1>
+        </div>
+
+        <div id="order-items">
+          <table class="show-cart table">
+          </table>
+        </div>
+        <div id="order-total">
+          <div class="line-item subtotal">
+            <p class="label"> <span class="total-count"></span> items</p>
+            <p class="price" data-subtotal></p>
+
+          </div>
+          <div class="line-item shipping">
+            <p class="label">Shipping</p>
+            <p class="price">Free</p>
+          </div>
+
+          <div class="line-item total">
+            <p class="label">Total</p>
+            $<span class="total-cart total"></span>
+          </div>
+
+        </div>
+        </section>
+      </aside>
+
       <form id="payment-form" method="POST" action="showcheckout.php">
-        <p class="instruction"><span>Complete</span>/<span id="generate">generate</span> your shipping and payment
-          details below</p>
         <section>
           <h2>Shipping &amp; Billing Information</h2>
           <fieldset class="with-state">
@@ -51,7 +97,7 @@
             </label>
             <label class="select">
               <span>Country</span>
-              <div id="country" class="field US">
+              <div id="country" class="field AU">
                 <select name="country">
                   <option value="AU" selected="selected">Australia</option>
                   <option value="AT">Austria</option>
@@ -140,7 +186,9 @@
             <fieldset>
               <label>
                 <span>Card</span>
-                <div id="card-element" class="field"></div>
+                <div id="card-element" class="field StripeElement StripeElement--empty">
+
+                </div>
               </label>
             </fieldset>
           </div>
@@ -207,48 +255,26 @@
       </div>
     </div>
   </main>
-  <aside id="summary">
-    <div class="header">
-      <h1>Order Summary</h1>
-    </div>
-    <div id="order-items"></div>
-    <div id="order-total">
-      <div class="line-item subtotal">
-        <p class="label">Subtotal</p>
-        <p class="price" data-subtotal></p>
-      </div>
-      <div class="line-item shipping">
-        <p class="label">Shipping</p>
-        <p class="price">Free</p>
-      </div>
-      <div class="line-item demo">
-        <div id="demo">
-          <p class="label">Demo in test mode</p>
-          <p class="note">You can copy and paste the following test cards to trigger different scenarios:</p>
-          <table class="note">
-            <tr>
-              <td>Default US card:</td>
-              <td class="card-number">4242<span></span>4242<span></span>4242<span></span>4242</td>
-            </tr>
-            <tr>
-              <td><a href="https://stripe.com/guides/strong-customer-authentication" target="_blank">Authentication</a>
-                required:</td>
-              <td class="card-number">4000<span></span>0027<span></span>6000<span></span>3184</td>
-            </tr>
-          </table>
-          <p class="note">
-            See the <a href="https://stripe.com/docs/testing#cards" target="_blank">docs</a> for a full list of test
-            cards.
-            Non-card payments will redirect to test pages.
-          </p>
-        </div>
-      </div>
-      <div class="line-item total">
-        <p class="label">Total</p>
-        <p class="price" data-total></p>
+
+
+
+
+  <center>
+    <div class="line-item demo">
+      <div id="demo">
+        <p class="instruction"><span>Complete</span>/<span id="generate">generate</span> your shipping and payment
+          details below</p>
+        <p class="label">Demo mode</p>
+        <p class="note">You can copy and paste the following test cards to trigger different scenarios:</p>
+        <table class="note">
+          <tr>
+            <td>Default US card:</td>
+            <td class="card-number">4242<span></span>4242<span></span>4242<span></span>4242</td>
+          </tr>
+        </table>
       </div>
     </div>
-  </aside>
+  </center>
   <!-- Stripe.js v3 for Elements -->
   <script src="https://js.stripe.com/v3/"></script>
   <!-- Library to render QR codes -->
@@ -260,9 +286,11 @@
     integrity="sha384-PlFzuf6GOlJNxLuosezJ/jwndIVZ2hWI/AmvYQtBzstOdLtcUe6DPSI4LsqwiN1y" crossorigin="anonymous">
   </script>
   <!-- App -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../js/generate.js"></script>
   <script src="../js/store.js"></script>
   <script src="../js/payments.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
 
 </html>
