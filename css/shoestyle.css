@@ -95,14 +95,14 @@ img::-moz-selection {
 
 .btn-primary {
   background-color: #fed136;
-  border-color: #fed136;
+  border-color: #ecc434;
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
   background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  border-color: #ecb434 !important;
   color: white;
 }
 
@@ -1022,4 +1022,37 @@ ul.social-buttons li a:hover {
 /* Custom rules for accessories*/
 .prodimg {
   width: 400px;
+}
+
+
+/* Custom newsletter form */
+
+.newsletter .newsletter-form input {
+  height: 55px;
+  width: 40%;
+  padding: 18px 135px 17px 30px;
+  font-weight: 400;
+  border: 5px;
+  border-radius: 20px;
+  border-color: #212529;
+  outline: black;
+  background-color: #fff;
+  color: black;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+/* Google map custom*/
+.outermap {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 100vw;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 100vw;
 }

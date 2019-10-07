@@ -305,7 +305,19 @@
       </div>
     </div>
   </section>
+  <!-- Newsletter signup-->
+  <center class="bg-light py-5 pb-5">
+    <div class="newsletter js-rollover" data-radius="50">
+      <h2>Get the latest<br> info about Tech</h2>
+      <p>Register to our newsletter and don’t miss anything anymore. We promise we will not spam
+        you!</p>
 
+      <form method="GET" action="#sub" id="newsletter" onsubmit="return sub()" class="newsletter-form">
+        <input type="email" id="emailsub" placeholder="Enter your email">
+        <button type="submit" class="btn btn-primary">Subscribe</a>
+      </form>
+    </div>
+  </center>
   <!-- Clients -->
   <section class="py-5">
     <div class="container">
@@ -375,7 +387,12 @@
       </div>
     </div>
   </section>
-
+  <!-- Google map-->
+  <div class="mapouter">
+    <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=rmit%20university&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+  </div>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -992,6 +1009,23 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <a href="checkout" type="button" class="btn btn-primary">Order now</a>
           <button class="clear-cart btn btn-danger">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Alert subscribed modal-->
+  <div class="modal fade" id="sub" tabindex="-1" role="dialog" aria-labelledby="sub" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="alert alert-success">
+            You have been subscribed
+            Thanks
+            <script type="text/JavaScript">
+
+            </script>
+            <span id="subemail"></span>
+          </div>
         </div>
       </div>
     </div>

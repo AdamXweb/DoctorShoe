@@ -72,3 +72,21 @@ function terms() {
 function privacy() {
   alert("Viewing Privacy Policy")
 };
+
+function sub() {
+  if (document.getElementById("emailsub").value == null || document.getElementById("emailsub").value == "") {
+
+    var email = document.getElementById("emailsub");
+    email.addEventListener("input", function (event) {
+      if (email.validity.typeMismatch) {
+        email.setCustomValidity("Please enter an email");
+      } else {
+        email.setCustomValidity("");
+      }
+    });
+  } else {
+    var message = document.getElementById("emailsub").value;
+    subemail.innerHTML = message;
+    $('#sub').modal('show');
+  }
+};
