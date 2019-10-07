@@ -64,3 +64,11 @@ $("#selectcustom").on("change", function () {
     $("select#color").val($(this).val());
   });
 });
+
+function terms() {
+  alert("Viewing Terms and Conditions")
+};
+
+function privacy() {
+  alert("Viewing Privacy Policy")
+};
