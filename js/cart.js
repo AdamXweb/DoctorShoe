@@ -9,11 +9,13 @@ var shoppingCart = (function () {
   cart = [];
 
   // Constructor
-  function Item(name, price, count, description) {
+  function Item(name, price, count, desc, ex, id) {
     this.name = name;
     this.price = price;
     this.count = count;
-    this.description = description;
+    this.desc = desc;
+    this.ex = ex;
+    this.id = id;
   }
 
   // Save cart
@@ -36,7 +38,7 @@ var shoppingCart = (function () {
   var obj = {};
 
   // Add to cart
-  obj.addItemToCart = function (name, price, count, desc) {
+  obj.addItemToCart = function (name, price, count, desc, ex, id) {
     for (var item in cart) {
       if (cart[item].name === name) {
         cart[item].count++;
@@ -44,7 +46,7 @@ var shoppingCart = (function () {
         return;
       }
     }
-    var item = new Item(name, price, count, desc);
+    var item = new Item(name, price, count, desc, ex, id);
     cart.push(item);
     saveCart();
   }
@@ -58,9 +60,9 @@ var shoppingCart = (function () {
     }
   };
   // Remove item from cart
-  obj.removeItemFromCart = function (name) {
+  obj.removeItemFromCart = function (id) {
     for (var item in cart) {
-      if (cart[item].name === name) {
+      if (cart[item].id === id) {
         cart[item].count--;
         if (cart[item].count === 0) {
           cart.splice(item, 1);
@@ -145,8 +147,10 @@ $('.add-to-cart').click(function (event) {
   event.preventDefault();
   var name = $(this).data('name');
   var desc = $(this).data('desc');
+  var ex = $(this).data('ex');
+  var id = $(this).data('id');
   var price = Number($(this).data('price'));
-  shoppingCart.addItemToCart(name, price, 1, desc);
+  shoppingCart.addItemToCart(name, price, 1, desc, ex, id);
   $('#evShoe, #leathershoe, #Access').modal('hide');
   $('#cart').modal('show');
   displayCart();
@@ -166,10 +170,11 @@ function displayCart() {
     output += "<tr>" +
       "<td>" + cartArray[i].name + "</td>" +
       "<td>(" + cartArray[i].desc + ")</td>" +
+      "<td>" + cartArray[i].ex + "</td>" +
       "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
       " = " +
-      "<td>" + "$ " + cartArray[i].total + "</td>" +
-      "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
+      "<td class='pri'>" + "$ " + cartArray[i].total + "</td>" +
+      "<td><button class='minus-item btn btn-danger' data-id=" + cartArray[i].id + ">X</button></td>" +
       "</tr>";
   }
   $('.show-cart').html(output);
@@ -179,8 +184,8 @@ function displayCart() {
 
 // Delete item button
 $('.show-cart').on("click", ".minus-item", function (event) {
-  var name = $(this).data('name')
-  shoppingCart.removeItemFromCart(name);
+  var id = $(this).data('id')
+  shoppingCart.removeItemFromCart(id);
   displayCart();
 })
 

@@ -1017,7 +1017,9 @@ ul.social-buttons li a:hover {
   align-self: center;
 }
 
-
+.pri {
+  white-space: nowrap;
+}
 
 /* Custom rules for accessories*/
 .prodimg {
