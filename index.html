@@ -306,17 +306,19 @@
     </div>
   </section>
   <!-- Newsletter signup-->
-  <center class="bg-light py-5 pb-5">
-    <div class="newsletter js-rollover" data-radius="50">
-      <h2>Receive tips on<br> maintaining your shoes!</h2>
-      <p>Stay in the loop, receive exclusive customisation options and tips about maintaining your shoes.</p>
+  <section id="newsletter">
+    <center class="bg-light py-5 pb-5">
+      <div class="newsletter js-rollover" data-radius="50">
+        <h2>Receive tips on<br> maintaining your shoes!</h2>
+        <p>Stay in the loop, receive exclusive customisation options and tips about maintaining your shoes.</p>
 
-      <form method="GET" action="#sub" id="newsletter" onsubmit="return sub()" class="newsletter-form">
-        <input type="email" id="emailsub" placeholder="Enter your email">
-        <button type="submit" class="btn btn-primary">Subscribe</a>
-      </form>
-    </div>
-  </center>
+        <form method="GET" action="#sub" id="newsletter" onsubmit="return sub()" class="newsletter-form">
+          <input type="email" id="emailsub" placeholder="Enter your email">
+          <button type="submit" class="btn btn-primary">Subscribe</a>
+        </form>
+      </div>
+    </center>
+  </section>
   <!-- Clients -->
   <section class="py-5">
     <div class="container">
@@ -348,7 +350,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+          <form id="contactForm" action="/mail/contact_me.php" name="sentMessage" novalidate="novalidate">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -552,8 +554,9 @@
                       <p>This product is custom-made and shipped to you in 3
                         weeks or less.
                         No-Cost returns on all
-                        orders or recolor, within 7 days.</p>
-                      <div class="card col-6">
+                        orders or recolor, within 7 days.
+                      </p>
+                      <div class="card col-6 py-3">
                         <h5>Materials</h5>
                         <p>Made with 100% leather.</p>
                         </br>
@@ -562,31 +565,28 @@
                           air-cushioned sole,
                           with grooved edges.</p>
                       </div>
-                      <div class="card col-6">
+                      <div class="card col-6 py-3">
                         <h5>Shipping</h5>
                         <p>All shoes from DoctorShoe come with free shipping, and a free return
                           package.</p>
                         <h5>Warranty</h5>
-                        <p>The leather shoes, our highest quality shoe comes with a 5 year
-                          guarantee. Within that time
+                        <p>The leather shoes, our highest quality shoe comes with a 5 year guarantee.
+                          Within that time
                           you may send the shoes back for a recolour free of charge.</p>
                       </div>
                       <div class="col-12">
-
-                        <p>
-                          </br>
-                          <h6>Choose your materials</h6>
-                          Get your upper, Swoosh and backtab in leather, suede or canvas. Keep each
-                          part of the design
-                          the same, or switch them up to add an accent.
-                          </br>
-                          <h6>Choose your colours</h6>
-                          Choose your colour of the leather and texture of your own shoe.
-                          </br>
-                          <h6>Make it yours</h6>
-                          Celebrate who you are and where you come from with personalised text on
-                          the heel.
-                        </p>
+                        <br style="margin-bottom:10px;">
+                        <h6>Choose your materials</h6>
+                        Get your upper, Swoosh and backtab in leather, suede or canvas. Keep each
+                        part of the design
+                        the same, or switch them up to add an accent.
+                        <br style="margin-bottom:30px;">
+                        <h6>Choose your colours</h6>
+                        Choose your colour of the leather and texture of your own shoe.
+                        <br style="margin-bottom:30px;">
+                        <h6>Make it yours</h6>
+                        Celebrate who you are and where you come from with personalised text on the
+                        heel.
                       </div>
                     </div>
                     <!-- End product description-->
@@ -721,7 +721,7 @@
                   weeks or less.
                   No-Cost returns on all
                   orders or recolor, within 7 days. </p>
-                <div class=" card col-6">
+                <div class=" card col-6 py-3">
                   <h5>Materials</h5>
                   <p>Made with 100% leather.</p>
                   </br>
@@ -729,7 +729,7 @@
                   <p>Finest constructions in footwear: built on the iconic and comfortable air-cushioned sole,
                     with grooved edges.</p>
                 </div>
-                <div class="card col-6">
+                <div class="card col-6 py-3">
                   <h5>Shipping</h5>
                   <p>All shoes from DoctorShoe come with free shipping, and a free return package.</p>
                   <h5>Warranty</h5>
@@ -737,17 +737,17 @@
                     you may send the shoes back for a recolour free of charge.</p>
                 </div>
                 <div class="col-12">
-                  </br>
+                  <br style="margin-bottom:10px;">
                   <h6>Choose your materials</h6>
                   Get your upper, Swoosh and backtab in leather, suede or canvas. Keep each part of the design
                   the same, or switch them up to add an accent.
-                  </br>
+                  <br style="margin-bottom:30px;">
                   <h6>Choose your colours</h6>
                   Choose your colour of the leather and texture of your own shoe.
-                  </br>
+                  <br style="margin-bottom:30px;">
                   <h6>Make it yours</h6>
                   Celebrate who you are and where you come from with personalised text on the heel.
-                  </p>
+
                 </div>
               </div>
               <!-- End product description-->
