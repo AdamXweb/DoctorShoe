@@ -60,6 +60,11 @@ h6 {
   }
 }
 
+.my-auto>ul>li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
 /*
 ::-moz-selection {
   background: #fed136;
@@ -1026,6 +1031,11 @@ ul.social-buttons li a:hover {
   width: 400px;
 }
 
+@media only screen and (max-width: 800px) {
+  .prodimg {
+    width: 200px !important;
+  }
+}
 
 /* Custom newsletter form */
 
