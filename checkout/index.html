@@ -67,7 +67,7 @@
         </section>
       </aside>
 
-      <form id="payment-form" method="POST" action="showcheckout.php">
+      <form id="payment-form" method="GET" action="showcheckout.php">
         <section>
           <h2>Shipping &amp; Billing Information</h2>
           <fieldset class="with-state">
@@ -187,7 +187,18 @@
               <label>
                 <span>Card</span>
                 <div id="card-element" class="field StripeElement StripeElement--empty">
-
+                  <div class="CardField-input-wrapper is-ready-to-slide" dir="ltr">
+                    <input class="InputElement Input Input--empty" autocomplete="cc-number" autocorrect="off"
+                      spellcheck="false" type="tel" name="cardnumber" aria-label="Credit or debit card number"
+                      placeholder="Card number" aria-placeholder="Card number" maxlength="19" aria-invalid="false"
+                      value="" data-op-id="0">
+                    <input class="InputElement  Input Input--empty" autocomplete="cc-exp" autocorrect="off"
+                      spellcheck="false" type="tel" name="exp-date" aria-label="Credit or debit card expiration date"
+                      placeholder="MM / YY" aria-placeholder="MM / YY" maxlength="5" aria-invalid="false"
+                      value=""><input class="InputElement  Input Input--empty" autocomplete="cc-csc" autocorrect="off"
+                      spellcheck="false" type="tel" name="cvc" aria-label="Credit or debit card CVC/CVV"
+                      placeholder="CVC" aria-placeholder="CVC" aria-invalid="false" maxlength="3" value=""
+                      data-com.onepassword.iv=""></div>
                 </div>
               </label>
             </fieldset>
