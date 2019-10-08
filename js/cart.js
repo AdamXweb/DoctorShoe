@@ -9,13 +9,21 @@ var shoppingCart = (function () {
   cart = [];
 
   // Constructor
-  function Item(name, price, count, desc, ex, id) {
+  function Item(name, price, count, desc, ex, id, evcoso, evcola, evcoup, evcoba, lecola, lecote, lecost, lecoco) {
     this.name = name;
     this.price = price;
     this.count = count;
     this.desc = desc;
     this.ex = ex;
     this.id = id;
+    this.evcoso = evcoso;
+    this.evcola = evcola;
+    this.evcoup = evcoup;
+    this.evcoba = evcoba;
+    this.lecola = lecola;
+    this.lecote = lecote;
+    this.lecost = lecost;
+    this.lecoco = lecoco;
   }
 
   // Save cart
@@ -38,7 +46,7 @@ var shoppingCart = (function () {
   var obj = {};
 
   // Add to cart
-  obj.addItemToCart = function (name, price, count, desc, ex, id) {
+  obj.addItemToCart = function (name, price, count, desc, ex, id, evcoso, evcola, evcoup, evcoba, lecola, lecote, lecost, lecoco) {
     for (var item in cart) {
       if (cart[item].name === name) {
         cart[item].count++;
@@ -46,7 +54,7 @@ var shoppingCart = (function () {
         return;
       }
     }
-    var item = new Item(name, price, count, desc, ex, id);
+    var item = new Item(name, price, count, desc, ex, id, evcoso, evcola, evcoup, evcoba, lecola, lecote, lecost, lecoco);
     cart.push(item);
     saveCart();
   }
@@ -142,6 +150,7 @@ var shoppingCart = (function () {
 // *****************************************
 // Triggers / Events
 // *****************************************
+//, evcoso, evcola, evcoup, evcoba, lecola, lecote, lecost, lecoco
 // Add item
 $('.add-to-cart').click(function (event) {
   event.preventDefault();
@@ -149,8 +158,16 @@ $('.add-to-cart').click(function (event) {
   var desc = $(this).data('desc');
   var ex = $(this).data('ex');
   var id = $(this).data('id');
+  var evcoso = $(this).data('evcoso');
+  var evcola = $(this).data('evcola');
+  var evcoup = $(this).data('evcoup');
+  var evcoba = $(this).data('evcoba');
+  var lecola = $(this).data('lecola');
+  var lecote = $(this).data('lecote');
+  var lecost = $(this).data('lecost');
+  var lecoco = $(this).data('lecoco');
   var price = Number($(this).data('price'));
-  shoppingCart.addItemToCart(name, price, 1, desc, ex, id);
+  shoppingCart.addItemToCart(name, price, 1, desc, ex, id, evcoso, evcola, evcoup, evcoba, lecola, lecote, lecost, lecoco);
   $('#evShoe, #leathershoe, #Access').modal('hide');
   $('#cart').modal('show');
   displayCart();
@@ -167,9 +184,10 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for (var i in cartArray) {
-    output += "<tr>" +
+    output +=
+      "<tr>" +
       "<td>" + cartArray[i].name + "</td>" +
-      "<td>(" + cartArray[i].desc + ")</td>" +
+      "<td>(" + cartArray[i].desc + cartArray[i].evcoso + " " + cartArray[i].evcola + " " + cartArray[i].evcoup + " " + cartArray[i].evcoba + " " + cartArray[i].lecoco + " " + cartArray[i].lecola + " " + cartArray[i].lecost + " " + cartArray[i].lecote + ")</td>" +
       "<td>" + cartArray[i].ex + "</td>" +
       "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
       " = " +
@@ -177,7 +195,7 @@ function displayCart() {
       "<td><button class='minus-item btn btn-danger' data-id=" + cartArray[i].id + ">X</button></td>" +
       "</tr>";
   }
-  $('.show-cart').html(output);
+  $('.show-cart').html(output)
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
 }

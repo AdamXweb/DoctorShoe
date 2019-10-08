@@ -542,9 +542,11 @@
                   <div class="col-12">
                     <div class="mb-5">
                       <p class="mb-2">$250</p>
-                      <a class="add-to-cart mb-5 btn btn-primary" data-name="Leather shoe" data-price="250"
-                        data-desc="Leather Shoe colours:{base},{laces},{stiching}. Texture is {texture}" data-id="1"
-                        data-ex="Size {}" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
+                      <a class="add-to-cart mb-5 btn btn-primary" id="leacart" data-name="Leather shoe" data-price="250"
+                        data-lecola="Laces: Red" data-lecote="Texture: Normal" data-lecost="Stiching: Red"
+                        data-lecoco="Base: Red" data-evcoba="" data-evcoso="" data-evcola="" data-evcoup=""
+                        data-desc="Iconic Leather Shoe" data-id="1" data-ex="US 6" data-toggle="modal" href="#"><i
+                          class="fas fa-cart-plus"></i>
                         Add to cart </a>
                     </div>
                     <!-- Product descrtiption-->
@@ -707,9 +709,11 @@
                 <div class="col-12">
                   <div class="mb-5">
                     <p class="mb-2">$100</p>
-                    <a class="add-to-cart btn btn-primary" data-name="Everyday shoe" data-id="2"
-                      data-desc="Everyday shoe in colours:" data-ex="Size {}" data-price="100" data-toggle="modal"
-                      href="#"><i class="fas fa-cart-plus"></i>
+                    <a class="add-to-cart btn btn-primary" id="evcart" data-name="Everyday shoe" data-id="2"
+                      data-desc="Our everyday shoe " data-ex="US 6" data-price="100" data-evcoba="Base: White"
+                      data-evcoso="Sole: White" data-evcola="Laces: White" data-evcoup="Upper: White" data-lecola=""
+                      data-lecote="" data-lecost="" data-lecoco="" data-toggle="modal" href="#"><i
+                        class="fas fa-cart-plus"></i>
                       Add to cart </a>
                   </div>
                 </div>
@@ -789,8 +793,10 @@
                           in all eyelets!</li>
                         <li>Alum Tanned Laces: Brown, Black, Tan, Burgundy, etc.</li>
                       </ul>
-                      <a class="add-to-cart btn btn-primary" data-name="Shoe laces" data-desc="Laces" data-ex=""
-                        data-id="3" data-price="50" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
+                      <a class="add-to-cart btn btn-primary" id="lacescart" data-name="Shoe laces"
+                        data-desc="Our signature laces" data-ex="" data-id="3" data-price="50" data-evcoba=""
+                        data-evcoso="" data-evcola="" data-evcoup="" data-lecola="" data-lecote="" data-lecost=""
+                        data-lecoco="" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
                         Add to cart
                       </a>
                     </div>
@@ -809,9 +815,10 @@
                         <li>Filled great with natural oils to bring moisture back into your leathershoe.</li>
                         <li>Helps to extend the life of your shoes by protection it from dust.</li>
                       </ul>
-                      <a class="add-to-cart btn btn-primary mb-5" data-name="Doc Polish" data-desc="Shoe polish"
-                        data-id="4" data-ex="" data-price="40" data-toggle="modal" href="#"><i
-                          class="fas fa-cart-plus"></i>
+                      <a class="add-to-cart btn btn-primary mb-5" id="polishcart" data-name="Doc Polish"
+                        data-desc="Shoe polish" data-id="4" data-ex="" data-price="40" data-evcoba="" data-evcoso=""
+                        data-evcola="" data-evcoup="" data-lecola="" data-lecote="" data-lecost="" data-lecoco=""
+                        data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
                         Add to cart
                       </a>
                     </div>
@@ -832,9 +839,10 @@
                         <li> 10 ATM water resistance</li>
                         <li> Has a good quartz movement</li>
                       </ul>
-                      <a class="add-to-cart btn btn-primary mb-5" data-name="Watch" data-desc="Signature watch"
-                        data-id="5" data-ex="" data-price="150" data-toggle="modal" href="#"><i
-                          class="fas fa-cart-plus"></i>
+                      <a class="add-to-cart btn btn-primary mb-5" id="watchcart" data-name="Watch"
+                        data-desc="Signature watch" data-id="5" data-ex="" data-price="150" data-evcoba=""
+                        data-evcoso="" data-evcola="" data-evcoup="" data-lecola="" data-lecote="" data-lecost=""
+                        data-lecoco="" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
                         Add to cart
                       </a>
                     </div>
@@ -855,8 +863,10 @@
                         <li> Stylish yet functional buckle</li>
                         <li> Classy and contemporary.</li>
                       </ul>
-                      <a class="add-to-cart btn btn-primary mb-5" data-name="Leather belt" data-desc="Belt" data-ex=""
-                        data-id="6" data-price="70" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
+                      <a class="add-to-cart btn btn-primary mb-5" id="beltcart" data-name="Leather belt"
+                        data-desc="Iconic DoctorShoe Belt" data-ex="" data-id="6" data-price="70" data-evcoba=""
+                        data-evcoso="" data-evcola="" data-evcoup="" data-lecola="" data-lecote="" data-lecost=""
+                        data-lecoco="" data-toggle="modal" href="#"><i class="fas fa-cart-plus"></i>
                         Add to cart </a>
                     </div>
                   </div>
@@ -1005,7 +1015,17 @@
           </button>
         </div>
         <div class="modal-body">
-          <table class="show-cart table">
+          <table class="table">
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Option</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+            <tbody class="show-cart">
+
+            </tbody>
           </table>
           <div>Total price: $<span class="total-cart"></span></div>
         </div>
