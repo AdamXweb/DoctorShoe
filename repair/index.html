@@ -70,7 +70,7 @@
 
   <section class="page-section">
     <div class="container">
-      <form action="#">
+      <form action="repairfeedback.php">
 
         <header>
           <h2>Return and Repair product</h2>
@@ -80,7 +80,8 @@
         <div>
           <label class="desc" id="title1" for="Field1">Postage Label:</label>
           <div>
-            <input id="Field1" name="Field1" type="text" class="field text fn" value="" required size="8" tabindex="1">
+            <input id="Postagelabel" name="Postage_label" type="text" class="field text fn" value="" required size="8"
+              tabindex="1">
           </div>
         </div>
 
@@ -89,7 +90,8 @@
             Description of what is damaged:
           </label>
           <div>
-            <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
+            <input id="Descriptiondamages" name="Description_damages" type="text" spellcheck="false" value=""
+              maxlength="255" tabindex="3">
           </div>
         </div>
 
@@ -100,7 +102,7 @@
           </br>
 
           <label>Colour of upper </label>
-          <select id="selectupper" class="selectupper mb-2">
+          <select id="upper" name="acolour" value="Get selected values" class="selectupper mb-2">
             <option style="background-color: White;" value="white">White</option>
             <option style="background-color: red;" value="red">Red</option>
             <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
@@ -110,9 +112,10 @@
             <option style="background-color: DeepPink;" value="pink">Pink</option>
             <option style="background-color: brown;color: #FFFFFF;" value="brown">Brown</option>
           </select>
+
           </br>
           <label>Colour of laces </label>
-          <select id="selectlace" class="selectlace mb-2">
+          <select id="laces" name="bcolour" value="Get selected values" class="selectlace mb-2">
             <option style="background-color: White;" value="white">White</option>
             <option style="background-color: red;" value="red">Red</option>
             <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
@@ -124,7 +127,7 @@
           </select>
           </br>
           <label>Colour of sole </label>
-          <select id="selectsole" class="selectsole mb-2">
+          <select id="sole" name="ccolour" value="Get selected values" class="selectsole mb-2">
             <option style="background-color: White;" value="white">White</option>
             <option style="background-color: red;" value="red">Red</option>
             <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
@@ -136,7 +139,7 @@
           </select>
           </br>
           <label>Colour of base </label>
-          <select id="selectbase" class="selectbase mb-2">
+          <select id="base" name="dcolour" value="Get selected values" class="selectbase mb-2">
             <option style="background-color: White;" value="white">White</option>
             <option style="background-color: red;" value="red">Red</option>
             <option style="background-color: lightgreen;color: #FFFFFF;" value="green">Green</option>
@@ -158,7 +161,8 @@
               Ship back to following address
             </legend>
             <div>
-              <input id="Field3" name="Field3" type="text" spellcheck="false" value="" maxlength="255" tabindex="3">
+              <input id="Address" name="Shipping_address" type="text" spellcheck="false" value="" maxlength="255"
+                tabindex="3">
             </div>
           </fieldset>
         </div>
