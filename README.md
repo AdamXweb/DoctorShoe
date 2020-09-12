@@ -1,22 +1,24 @@
 # DoctorShoe
-RMIT Project
-
+RMIT E-Business Systems Project 
+![Prototype of leather shoe customisation](https://adam.kostarelas.com/DoctorShoe/img/dsleather.png)
 
 #### About
 
-E Business project to create an e-commerce store.
-Doctor Shoe allows customisation of shoes, as well as repair and recolouring them.
+This was our group project to create an e-commerce store.
+Doctor Shoe allows customisation of shoes, as well as repair and recolouring of them.
 
 
 #### Key web features
 
-Choose customisations for each 'CSS' Shoe.
+**Choose customisations for each 'CSS' Shoe.**
 Options include:
 - Colours
 - Textures
-
-Other features:
+![Prototype of everyday shoe customisation](https://adam.kostarelas.com/DoctorShoe/img/dseveryday.png)
+\
+**Other features:**
 - Shopping cart
+![Cart functionality](https://adam.kostarelas.com/DoctorShoe/img/dscart.png)
 - Return form
 - Contact us
 - Checkout
@@ -50,3 +52,5 @@ Checkout page modified from:
 Contributions from team members:
  - Text on Leather shoe description
  - Repair and send back page format and text
+ 
+ INTE2047 - E business systems
